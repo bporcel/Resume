@@ -1,0 +1,179 @@
+body{
+    padding: 0 10%;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+}
+
+h1{
+    font-weight: 500;
+    font-size: x-large;
+    /* color: #26384f; */
+}
+
+/* h2{
+    font-weight: 400;
+    font-size: medium;
+    color:  #26384f;
+} */
+
+h3{
+    font-weight: 400;
+    font-size: medium;
+    color:  #9999ff;
+}
+
+h4{
+    font-size: medium;
+    font-weight: 400;
+    /* color: #3333cc; */
+}
+
+p{
+    color: #26384f;
+    margin-left: 1em; 
+}
+
+.link{
+    text-decoration: none;
+    border-bottom: solid 1px #9999ff;
+    padding-bottom: .3em;
+    color: #26384f;
+}
+.link:hover{
+    transition: .5s;
+    color: #9999ff;
+    border-bottom-color: #26384f;
+}
+
+.reversed-link{
+    text-decoration: none;
+    /* border-bottom: solid 1px #9999ff; */
+    color: #9999ff;
+}
+
+.reversed-link:hover{
+    transition: .5s;
+    color: #26384f;
+}
+
+hr{
+    color: #26384f;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    height: 0px;
+}
+
+ul{
+    list-style: none;
+    padding: 0 1em;
+}
+
+li::before{
+    content: '· ';
+}
+
+header{
+    display: grid;
+    grid-template-areas:
+    "name title contact"
+    "date NONE NONE";
+    grid-template-rows: repeat(2, auto);
+    grid-template-columns: .8fr 1.2fr 3fr;
+}
+
+.name{
+    grid-area: name;
+}
+
+.title{
+    grid-area: title;
+    color: #9999ff;
+}
+
+.date{
+    grid-area: date;
+}
+
+.contact{
+    grid-area: contact;
+    justify-self: flex-end;
+    align-self: center;
+    margin-top: 10px;
+}
+
+.skills{
+    display: grid;
+    grid-template-areas: "professional additional social";
+    grid-template-rows: auto;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.professional{
+    grid-area: professional;
+}
+
+.additional{
+    grid-area: additional;
+}
+
+.social{
+    grid-area: social;
+}
+
+
+.colored{
+    color: #3333cc;
+}
+
+.m-0{
+    margin: 0;
+}
+
+.mb-0{
+    margin-bottom: 0;
+}
+
+
+@media (max-width: 800px) {
+    header{
+        display: grid;
+        grid-template-areas:
+        "name title"
+        "contact contact"
+        ;
+        grid-template-rows: repeat(2, auto);
+        grid-template-columns: 1fr 1fr;
+    }
+
+    h1{
+        font-weight: 500;
+        font-size: medium;
+        color: #26384f;
+        margin-top: 0;
+    }
+
+    .link{
+        font-size: medium;
+        border: none;
+        color: #9999ff;
+    }
+    
+    .title{
+        justify-self: flex-end;
+        color: #26384f;
+    }
+
+    .contact{
+        justify-self: flex-start;
+    }
+    
+    .date{
+        display: none;
+    }
+
+    .name{
+        align-self: center;
+    }
+  }
+  
