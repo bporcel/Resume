@@ -12,9 +12,9 @@ h1{
 
 
 h3{
-    font-weight: 400;
+    font-weight: 500;
     font-size: medium;
-    color:  #9999ff;
+    color:  #013b5a;
 }
 
 h4{
@@ -24,29 +24,28 @@ h4{
 
 p{
     color: #26384f;
-    margin-left: 1em; 
 }
 
 .link{
     text-decoration: none;
-    border-bottom: solid 1px #9999ff;
+    border-bottom: solid 1px #013b5a;
     padding-bottom: .3em;
-    color: #26384f;
+    color: #013b5a;
 }
 .link:hover{
     transition: .5s;
-    color: #9999ff;
-    border-bottom-color: #26384f;
+    color: #4485a8;
+    border-bottom-color: #4485a8;
 }
 
 .reversed-link{
     text-decoration: none;
-    color: #9999ff;
+    color: #013b5a;
 }
 
 .reversed-link:hover{
     transition: .5s;
-    color: #26384f;
+    color: #4485a8;
 }
 
 hr{
@@ -54,11 +53,18 @@ hr{
     border-top: none;
     border-left: none;
     border-right: none;
+    margin-bottom: 2em;
+}
+
+.w-70{
+    width: 58%;
+    margin: 0;
 }
 
 ul{
     list-style: none;
-    padding: 0 1em;
+    padding: 0;
+    color: #26384f;
 }
 
 li::before{
@@ -80,7 +86,7 @@ header{
 
 .title{
     grid-area: title;
-    color: #9999ff;
+    color: #013b5a;
 }
 
 .date{
@@ -96,9 +102,9 @@ header{
 
 .skills{
     display: grid;
-    grid-template-areas: "professional additional social";
+    grid-template-areas: "professional additional social NONE";
     grid-template-rows: auto;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 20%);
 }
 
 .professional{
@@ -115,7 +121,7 @@ header{
 
 
 .colored{
-    color: #3333cc;
+    color: #013b5a;
 }
 
 .m-0{
@@ -127,7 +133,7 @@ header{
 }
 
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
     header{
         display: grid;
         grid-template-areas:
@@ -148,7 +154,7 @@ header{
     .link{
         font-size: medium;
         border: none;
-        color: #9999ff;
+        color: #013b5a;
     }
     
     .title{
@@ -166,6 +172,16 @@ header{
 
     .name{
         align-self: center;
+    }
+
+    .skills{
+        display: grid;
+        grid-template-areas: 
+        "professional"
+        "additional"
+        "social";
+        grid-template-rows: repeat(4, auto);
+        grid-template-columns: auto;
     }
   }
   
