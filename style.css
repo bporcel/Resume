@@ -54,6 +54,7 @@ hr {
   border-left: none;
   border-right: none;
   margin-bottom: 2em;
+  width: 100%;
 }
 
 .w-70 {
@@ -83,6 +84,9 @@ header {
     "date NONE NONE";
   grid-template-rows: repeat(2, auto);
   grid-template-columns: 0.8fr 1.2fr 3fr;
+  width: 80%;
+  padding-bottom: 1em;
+  border-bottom: 1px solid #d1d1e0;
 }
 
 .bullet::before {
