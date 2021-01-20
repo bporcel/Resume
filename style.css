@@ -1,187 +1,194 @@
-body{
-    padding: 0 10%;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 100;
+body {
+  padding: 0 10%;
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
 }
 
-h1{
-    font-weight: 500;
-    font-size: x-large;
-    color: #26384f;
+h1 {
+  font-weight: 500;
+  font-size: x-large;
+  color: #26384f;
 }
 
-
-h3{
-    font-weight: 500;
-    font-size: medium;
-    color:  #013b5a;
+h3 {
+  font-weight: 500;
+  font-size: medium;
+  color: #013b5a;
 }
 
-h4{
-    font-size: medium;
-    font-weight: 400;
+h4 {
+  font-size: medium;
+  font-weight: 400;
 }
 
-p{
-    color: #26384f;
+p {
+  color: #26384f;
+  width: 50%;
 }
 
-.link{
-    text-decoration: none;
-    border-bottom: solid 1px #013b5a;
-    padding-bottom: .3em;
-    color: #013b5a;
+.link {
+  text-decoration: none;
+  border-bottom: solid 1px #013b5a;
+  padding-bottom: 0.3em;
+  color: #013b5a;
 }
-.link:hover{
-    transition: .5s;
-    color: #4485a8;
-    border-bottom-color: #4485a8;
-}
-
-.reversed-link{
-    text-decoration: none;
-    color: #013b5a;
+.link:hover {
+  transition: 0.5s;
+  color: #4485a8;
+  border-bottom-color: #4485a8;
 }
 
-.reversed-link:hover{
-    transition: .5s;
-    color: #4485a8;
+.reversed-link {
+  text-decoration: none;
+  color: #013b5a;
 }
 
-hr{
-    color: #d1d1e0;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    margin-bottom: 2em;
+.reversed-link:hover {
+  transition: 0.5s;
+  color: #4485a8;
 }
 
-.w-70{
-    width: 58%;
-    margin: 0;
+hr {
+  color: #d1d1e0;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  margin-bottom: 2em;
 }
 
-ul{
-    list-style: none;
-    padding: 0;
-    color: #26384f;
+.w-70 {
+  width: 58%;
+  margin: 0;
 }
 
-li::before{
-    content: '· ';
+ul {
+  list-style: none;
+  padding: 0;
+  color: #26384f;
 }
 
-header{
-    display: grid;
-    grid-template-areas:
+li {
+  padding: 0.3em 2em 0.3em 0;
+}
+
+li::before {
+  content: "\2022  ";
+  font-weight: "bold";
+}
+
+header {
+  display: grid;
+  grid-template-areas:
     "name title contact"
     "date NONE NONE";
-    grid-template-rows: repeat(2, auto);
-    grid-template-columns: .8fr 1.2fr 3fr;
+  grid-template-rows: repeat(2, auto);
+  grid-template-columns: 0.8fr 1.2fr 3fr;
 }
 
-.name{
-    grid-area: name;
+.bullet::before {
+  content: "\2022  ";
+  font-weight: "bold";
 }
 
-.title{
-    grid-area: title;
-    color: #013b5a;
+.name {
+  grid-area: name;
 }
 
-.date{
-    grid-area: date;
+.title {
+  grid-area: title;
+  color: #013b5a;
 }
 
-.contact{
-    grid-area: contact;
-    justify-self: flex-end;
-    align-self: center;
-    margin-top: 10px;
+.date {
+  grid-area: date;
 }
 
-.skills{
-    display: grid;
-    grid-template-areas: "professional additional social NONE";
-    grid-template-rows: auto;
-    grid-template-columns: repeat(4, 20%);
+.contact {
+  grid-area: contact;
+  justify-self: flex-end;
+  align-self: center;
+  margin-top: 10px;
 }
 
-.professional{
-    grid-area: professional;
+.skills {
+  display: grid;
+  grid-template-areas: "professional additional social";
+  grid-template-rows: auto;
+  grid-template-columns: repeat(3, 20%);
+  justify-content: start;
 }
 
-.additional{
-    grid-area: additional;
+.professional {
+  grid-area: professional;
 }
 
-.social{
-    grid-area: social;
+.additional {
+  grid-area: additional;
 }
 
-
-.colored{
-    color: #013b5a;
+.social {
+  grid-area: social;
 }
 
-.m-0{
-    margin: 0;
+.colored {
+  color: #013b5a;
 }
 
-.mb-0{
-    margin-bottom: 0;
+.m-0 {
+  margin: 0;
 }
 
+.mb-0 {
+  margin-bottom: 0;
+}
 
 @media (max-width: 900px) {
-    header{
-        display: grid;
-        grid-template-areas:
-        "name title"
-        "contact contact"
-        ;
-        grid-template-rows: repeat(2, auto);
-        grid-template-columns: 1fr 1fr;
-    }
-
-    h1{
-        font-weight: 500;
-        font-size: medium;
-        color: #26384f;
-        margin-top: 0;
-    }
-
-    .link{
-        font-size: medium;
-        border: none;
-        color: #013b5a;
-    }
-    
-    .title{
-        justify-self: flex-end;
-        color: #26384f;
-    }
-
-    .contact{
-        justify-self: flex-start;
-    }
-    
-    .date{
-        display: none;
-    }
-
-    .name{
-        align-self: center;
-    }
-
-    .skills{
-        display: grid;
-        grid-template-areas: 
-        "professional"
-        "additional"
-        "social";
-        grid-template-rows: repeat(4, auto);
-        grid-template-columns: auto;
-    }
+  header {
+    display: grid;
+    grid-template-areas:
+      "name title"
+      "contact contact";
+    grid-template-rows: repeat(2, auto);
+    grid-template-columns: 1fr 1fr;
   }
-  
+
+  h1 {
+    font-weight: 500;
+    font-size: medium;
+    color: #26384f;
+    margin-top: 0;
+  }
+
+  .link {
+    font-size: medium;
+    border: none;
+    color: #013b5a;
+  }
+
+  .title {
+    justify-self: flex-end;
+    color: #26384f;
+  }
+
+  .contact {
+    justify-self: flex-start;
+  }
+
+  .date {
+    display: none;
+  }
+
+  .name {
+    align-self: center;
+  }
+
+  .skills {
+    display: grid;
+    grid-template-areas:
+      "professional"
+      "additional"
+      "social";
+    grid-template-rows: repeat(4, auto);
+    grid-template-columns: auto;
+  }
+}
